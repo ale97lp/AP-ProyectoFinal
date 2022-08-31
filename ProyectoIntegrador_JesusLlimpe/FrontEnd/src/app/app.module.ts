@@ -25,6 +25,8 @@ import { NewEducacionComponent } from './components/educacion/new-educacion.comp
 import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
 import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
 import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
+import { NewHysComponent } from './components/hys/new-hys.component';
+import { EditHysComponent } from './components/hys/edit-hys.component';
 
 
 
@@ -48,7 +50,9 @@ import { EditProyectosComponent } from './components/proyectos/edit-proyectos.co
     NewEducacionComponent,
     EditEducacionComponent,
     NewProyectosComponent,
-    EditProyectosComponent
+    EditProyectosComponent,
+    NewHysComponent,
+    EditHysComponent
     
     
     

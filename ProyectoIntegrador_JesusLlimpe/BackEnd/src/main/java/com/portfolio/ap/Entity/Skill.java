@@ -10,24 +10,25 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Experiencia {
+public class Skill {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String nombreE;
-    private String descripcionE;
+    private String nombreSk;
+    private String dominioSk;
 
-//Constructores
 
-    public Experiencia() {
+    //Constructores
+
+    public Skill() {
     }
 
-    public Experiencia(String nombreE, String descripcionE) {
-        this.nombreE = nombreE;
-        this.descripcionE = descripcionE;
+    public Skill(String nombreSk, String dominioSk) {
+        this.nombreSk = nombreSk;
+        this.dominioSk = dominioSk;
     }
 
-//Getters y Setters
+    //Getter y Setters
 
     public int getId() {
         return id;
@@ -37,24 +38,22 @@ public class Experiencia {
         this.id = id;
     }
 
-    public String getNombreE() {
-        return nombreE;
+    public String getNombreSk() {
+        return nombreSk;
     }
 
-    public void setNombreE(String nombreE) {
-        this.nombreE = nombreE;
+    public void setNombreSk(String nombreSk) {
+        this.nombreSk = nombreSk;
     }
 
-    public String getDescripcionE() {
-        return descripcionE;
+    public String getDominioSk() {
+        return dominioSk;
     }
 
-    public void setDescripcionE(String descripcionE) {
-        this.descripcionE = descripcionE;
+    public void setDominioSk(String dominioSk) {
+        this.dominioSk = dominioSk;
     }
 
-    
 }
 
-
-
+    

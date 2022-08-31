@@ -10,21 +10,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Experiencia {
+public class Acercade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String nombreE;
-    private String descripcionE;
+    private String descripcionA;
+
 
 //Constructores
 
-    public Experiencia() {
+    public Acercade() {
     }
 
-    public Experiencia(String nombreE, String descripcionE) {
-        this.nombreE = nombreE;
-        this.descripcionE = descripcionE;
+    public Acercade(String descripcionA) {
+        this.descripcionA = descripcionA;
     }
 
 //Getters y Setters
@@ -37,24 +36,12 @@ public class Experiencia {
         this.id = id;
     }
 
-    public String getNombreE() {
-        return nombreE;
+    public String getDescripcionA() {
+        return descripcionA;
     }
 
-    public void setNombreE(String nombreE) {
-        this.nombreE = nombreE;
+    public void setDescripcionA(String descripcionA) {
+        this.descripcionA = descripcionA;
     }
 
-    public String getDescripcionE() {
-        return descripcionE;
-    }
-
-    public void setDescripcionE(String descripcionE) {
-        this.descripcionE = descripcionE;
-    }
-
-    
 }
-
-
-

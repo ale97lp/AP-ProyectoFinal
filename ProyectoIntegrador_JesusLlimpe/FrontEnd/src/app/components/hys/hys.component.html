@@ -1,11 +1,19 @@
 <div class="row">
     <h1>Hard & Soft Skills</h1>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
+    <div class="col-lg-8">
+        <button type="button" class="btn btn-dark" routerLink="/nuevask" *ngIf="isLogged">
+            Agregar Skill
+        </button>
+    </div>
+    
+   <td>
+        <tbody *ngFor="let Skill of skill">   
+                     
+    <circle-progress
+        [percent]=(+Skill.dominioSk)
         [radius]="80"
-        title="HTML"
-        subtitle="85%"
+        title="{{Skill.nombreSk}}"
+        subtitle="{{Skill.dominioSk}}%"
         subtitleColor="#11315a"
         subtitleFontSize="20"
         [showUnits]="false"
@@ -15,91 +23,20 @@
         [innerStrokeColor]="'#11315a'"
         [animation]="true"
         [animationDuration]="570"
-    ></circle-progress>   
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="80"
-        title="CSS"
-        subtitle="85%"
-        subtitleColor="#11315a"
-        subtitleFontSize="20"
-        [showUnits]="false"
-        [outerStrokeWidth]="10"
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#049dff'"
-        [innerStrokeColor]="'#11315a'"
-        [animation]="true"
-        [animationDuration]="570"
-    ></circle-progress>   
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="80"
-        title="JavaScript"
-        subtitle="85%"
-        subtitleColor="#11315a"
-        subtitleFontSize="20"
-        [showUnits]="false"
-        [outerStrokeWidth]="10"
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#049dff'"
-        [innerStrokeColor]="'#11315a'"
-        [animation]="true"
-        [animationDuration]="570"
-    ></circle-progress>   
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="80"
-        title="GitHub"
-        subtitle="85%"
-        subtitleColor="#11315a"
-        subtitleFontSize="20"
-        [showUnits]="false"
-        [outerStrokeWidth]="10"
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#049dff'"
-        [innerStrokeColor]="'#11315a'"
-        [animation]="true"
-        [animationDuration]="570"
-    ></circle-progress>   
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="80"
-        title="Inglés"
-        subtitle="85%"
-        subtitleColor="#11315a"
-        subtitleFontSize="20"
-        [showUnits]="false"
-        [outerStrokeWidth]="10"
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#049dff'"
-        [innerStrokeColor]="'#11315a'"
-        [animation]="true"
-        [animationDuration]="570"
-    ></circle-progress>   
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="80"
-        title="Teamwork"
-        subtitle="85%"
-        subtitleColor="#11315a"
-        subtitleFontSize="20"
-        [showUnits]="false"
-        [outerStrokeWidth]="10"
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#049dff'"
-        [innerStrokeColor]="'#11315a'"
-        [animation]="true"
-        [animationDuration]="570"
-    ></circle-progress>   
-    </div>
+    ></circle-progress>
+
+    <td *ngIf="isLogged">
+        <button class="btn btn-light" routerLink="/editsk/{{Skill.id}}">
+            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+    </td>
+    <td *ngIf="isLogged">
+        <button class="btn btn-danger" (click)="delete(Skill.id)">
+            <i class="bi bi-trash-fill"></i> BORRAR</button>
+    </td>     
+        </tbody> 
+        
+    </td>
+
 </div>
+
+

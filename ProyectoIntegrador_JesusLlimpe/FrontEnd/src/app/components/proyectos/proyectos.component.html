@@ -1,13 +1,12 @@
 <div class="row">
     <h1>Proyectos</h1>
-    <div class="col-lg-2">
+    <div class="col-lg-8">
         <button type="button" class="btn btn-dark" routerLink="nuevopro" *ngIf="isLogged">
             Agregar Proyecto
         </button>
     </div>
-
-    <div class="col-lg-8"></div>
-    <div class="col-sm-4 col-md-4 col-lg-7">
+    
+    <div class="col-lg-7">
         <table class="table">
             <tbody>
                 <tr *ngFor="let Proyectos of proyectos">

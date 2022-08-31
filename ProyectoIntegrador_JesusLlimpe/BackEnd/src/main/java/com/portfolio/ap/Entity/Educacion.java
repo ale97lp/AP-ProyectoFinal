@@ -18,7 +18,7 @@ public class Educacion {
     private String descripcionE;
 
 
-    //Constructores
+//Constructores
 
     public Educacion() {
     }
@@ -28,7 +28,7 @@ public class Educacion {
         this.descripcionE = descripcionE;
     }
 
-    //Getters y Setters
+//Getters y Setters
 
     public int getId() {
         return id;
@@ -53,6 +53,6 @@ public class Educacion {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
-    
-    
+      
+
 }
